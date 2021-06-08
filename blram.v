@@ -14,7 +14,7 @@ reg [31:0] memory[0:DEPTH-1];
 always @(posedge clk) begin
   o_ram_data_out <= #1 memory[i_addr[SIZE-1:0]];
   if (i_we)
-		memory[i_addr[SIZE-1:0]] <= #1 i_ram_data_in;
+  	memory[i_addr[SIZE-1:0]] <= #1 i_ram_data_in;
 end 
 
 initial begin
